@@ -1,7 +1,7 @@
-#include <time.h>
-#include <stdlib.h>
+#!/bin/bash
 
-srand(time(NULL));   // Initialization, should only be called once.
-int r = rand();      // Returns a pseudo-random integer between 0 and RAND_MAX.
+# Generate a random number between 0 and 999
+randomNumber=$(( RANDOM % 1000 ))
 
-printf("Random: %d\n",r);
+# Print the random number
+echo "Generated Random Number: $randomNumber"
