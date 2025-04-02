@@ -32,13 +32,13 @@ if response.status_code == 201:
     upload_url = release["upload_url"].split("{")[0]
 
     # Upload the executable
-    with open("random_program", "rb") as file:
+    with open("Random_c", "rb") as file:
         upload_headers = {
             "Authorization": f"token {GITHUB_TOKEN}",
             "Content-Type": "application/octet-stream"
         }
         upload_response = requests.post(
-            f"{upload_url}?name=random_program",
+            f"{upload_url}?name=Random_c",
             headers=upload_headers,
             data=file
         )
