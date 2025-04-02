@@ -1,7 +1,10 @@
-#!/bin/bash
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-# Generate a random number between 0 and 999
-randomNumber=$(( RANDOM % 1000 ))
-
-# Print the random number
-echo "Generated Random Number: $randomNumber"
+int main() {
+    srand(time(0)); // Seed the random number generator
+    int random_number = rand(); // Generate a random number
+    printf("Random Number: %d\n", random_number);
+    return 0;
+}
